@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .teste{
+            width: 500px;
+            height: 500px;
+           border: 1px solid black;
+        }
+          @media screen and (max-width: 1920px) {
+        .teste{
+           
+            background-color: yellow;
+        }
+        
+        .texto::before{
+        content: "Amarelo";
+         }
+    }
+        @media screen and (max-width: 1366px) {
+        .teste{
+          
+            background-color: blue;
+        }
+        .texto::before{
+        content: "Azul";
+         }
+        }
+          @media screen and (max-width: 1080px) {
+        .teste{
+            
+            background-color: red;
+        }
+        .texto::before{
+        content: "Vermelho";
+         }
+        }
+          @media screen and (max-width: 1024px) {
+        .teste{
+           
+            background-color:rgb(194, 35, 186);
+        }
+
+        .texto::before{
+        content: "Rosa";
+         }
+        }
+          @media screen and (max-width: 768px) {
+        .teste{
+            
+            background-color: orangered;
+        }
+        .texto::before{
+        content: "Laranja";
+         }
+        }
+          @media screen and (max-width: 420px) {
+              .teste{
+            
+            background-color: black;
+             }
+             .texto::before{
+        content: "Preto";
+       color: white;
+         }
+        }    
+        </style>
+</head>
+<body>
+
+    <div class="teste">
+        <h1 class="texto"></h1>
+    </div>
+    
+</body>
+</html>
