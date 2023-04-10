@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        function escolha(valor){
+        
+     var  escolhaM =     Math.random();
+
+            if(escolhaM <= 0.33){
+                escolhaM = 1;
+                var imagem = document.getElementById("Maq");
+
+                imagem.src = "https://images.pexels.com/photos/2363901/pexels-photo-2363901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+
+            }else if (escolhaM <= 0.66){
+                escolhaM = 2;
+                var imagem = document.getElementById("Maq");
+
+                imagem.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Paper_sheet.jpg/200px-Paper_sheet.jpg";
+
+                
+            }else{
+                escolhaM = 3;
+
+                var imagem = document.getElementById("Maq");
+
+                imagem.src = "https://armarinhoivo.com.br/media/catalog/product/cache/f8daa13036f0c017f45af26587c668de/g/f/gfdgfgfdg_1.jpg";    
+
+            }
+
+         
+
+            if(valor == escolhaM){
+                var resu = document.getElementById("result");
+                resu.innerHTML = "Empate";
+
+            }else if(valor == 1 && escolhaM == 3 ){
+                var resu = document.getElementById("result");
+                resu.innerHTML = "Ganhou";
+            }
+            else if(valor == 2 && escolhaM == 1 ){
+                var resu = document.getElementById("result");
+                resu.innerHTML = "Ganhou";
+            }
+            else if(valor == 3 && escolhaM == 2 ){
+                var resu = document.getElementById("result");
+                resu.innerHTML = "Ganhou";
+            }else{
+            var resu = document.getElementById("result");
+                resu.innerHTML = "Perdeu";
+            }
+        }
+
+
+
+        function pedra(){
+
+            var imagem = document.getElementById("Esc");
+
+            imagem.src = "https://images.pexels.com/photos/2363901/pexels-photo-2363901.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+            escolha(1);
+        }
+
+        function papel(){
+            var imagem = document.getElementById("Esc");
+
+            imagem.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Paper_sheet.jpg/200px-Paper_sheet.jpg";
+            escolha(2);
+        }
+        function tesoura(){
+            var imagem = document.getElementById("Esc");
+
+            imagem.src = "https://armarinhoivo.com.br/media/catalog/product/cache/f8daa13036f0c017f45af26587c668de/g/f/gfdgfgfdg_1.jpg";    
+            escolha(3);
+        }
+
+    </script>
+
+
+<style>
+
+.Player{
+
+    margin-top: 10%;
+    margin-left: 40%;
+    float: left;
+}
+
+img{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+   
+}
+
+.Escolhas{
+ 
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+<div class="Player">
+
+    <img id="Esc">
+
+    <img id="Maq">
+
+
+
+<p id="result"></p>
+
+
+<div  class="Escolhas">
+    <button onclick="pedra()">Pedra</button>
+    <button onclick="papel()">Papel</button>
+    <button onclick="tesoura()">Tesoura</button>
+    </div>
+    </div>
+</body>
+
+</html>
