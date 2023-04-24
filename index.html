@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        function Retangulo(x,y){
+            altura = x;
+            base = y;
+
+
+
+            this.area = function (){
+                return  (altura*base);
+
+            }
+
+
+        }
+
+        var teste = new Retangulo("10","10");
+
+        alert("Area: " + teste.area());
+
+
+
+
+        function  Conta (){
+
+            var corre, banco, numero, saldo;
+            this.setCorretista = function (nome){
+                corre = nome;
+
+            }
+            this.setbanco = function (nome){
+                banco = nome;
+
+            }
+            this.setnumero = function (nome){
+                numero = nome;
+
+            }
+            this.setsaldo = function (nome){
+                saldo = nome;
+
+            }
+
+            this.getCorretista = function (){
+               return corre ;
+
+            }
+            this.getbanco = function (){
+               return banco ;
+
+            }
+            this.getnumero = function (){
+               return numero ;
+
+            }
+            this.getsaldo = function (){
+               return saldo ;
+
+            }
+
+
+
+            
+
+        }
+
+        function corrente(){
+            var especial;
+
+            this.setespecial = function (nome){
+                this.especial = nome;
+
+            }
+            this.getespecial = function (){
+                return especial ;
+
+            }
+
+
+        }
+
+
+        function poupanca(){
+            var juros,venc;
+            this.setjuros = function (nome){
+                juros = nome;
+
+            }
+            this.setvenc = function (nome){
+                venc = nome;
+
+            }
+            this.getjuros = function (){
+             return   juros;
+
+            }
+            this.getvenc = function (){
+               return venc ;
+
+            }
+
+        }
+
+
+
+        poupanca.prototype = new Conta();
+        corrente.prototype = new Conta();
+
+
+        var contP = new poupanca();
+        var contC = new corrente();
+
+
+
+     contP.setCorretista(prompt("Nome Corretista"));
+     contP.setbanco( prompt("Banco"));
+     contP.setnumero( prompt("Numero da conta"));
+     contP.setsaldo( prompt("Saldo da Conta"));
+     contP.setjuros( prompt("Juros"));
+     contP.setvenc( prompt("Data de Vencimento"));
+    
+
+     contC.setCorretista(prompt("Nome Corretista"));
+     contC.setbanco( prompt("Banco"));
+     contC.setnumero( prompt("Numero da conta"));
+     contC.setsaldo( prompt("Saldo da Conta"));
+     contC.setespecial(prompt("Saldo da Conta"));
+
+
+    Alert(" Nome Correntista: " + contP.getCorretista() + "\n Banco: " + contP.getbanco() + "\n Numero Conta: "+ contP.getnumero() +
+    "\n Saldo: " + contP.getsaldo() + "\n Saldo Especial: " + ContP.getespecial());
+    
+    Alert(" Nome Correntista: " + ContC.getCorretista() + "\n Banco: " + ContC.getbanco() + "\n Numero Conta: "+ ContC.getnumero() +
+    "\n Saldo: " + ContC.getsaldo() + "\n  juros: " + ContC.getjuros() + "\n Data Vencimento:" + contC.getvenc())
+
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
