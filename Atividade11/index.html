@@ -76,7 +76,7 @@
             var especial;
 
             this.setespecial = function (nome){
-                this.especial = nome;
+                    especial = nome;
 
             }
             this.getespecial = function (){
@@ -132,14 +132,14 @@
      contC.setbanco( prompt("Banco"));
      contC.setnumero( prompt("Numero da conta"));
      contC.setsaldo( prompt("Saldo da Conta"));
-     contC.setespecial(prompt("Saldo da Conta"));
+     contC.setespecial(prompt("Saldo Especida Conta"));
 
 
-    Alert(" Nome Correntista: " + contP.getCorretista() + "\n Banco: " + contP.getbanco() + "\n Numero Conta: "+ contP.getnumero() +
-    "\n Saldo: " + contP.getsaldo() + "\n Saldo Especial: " + ContP.getespecial());
-    
-    Alert(" Nome Correntista: " + ContC.getCorretista() + "\n Banco: " + ContC.getbanco() + "\n Numero Conta: "+ ContC.getnumero() +
-    "\n Saldo: " + ContC.getsaldo() + "\n  juros: " + ContC.getjuros() + "\n Data Vencimento:" + contC.getvenc())
+    alert(" Nome Correntista: " + contP.getCorretista() + "\n Banco: " + contP.getbanco() + "\n Numero Conta: "+ contP.getnumero() +
+    "\n Saldo: " + contP.getsaldo() + "\n  juros: " + contP.getjuros() + "\n Data Vencimento:" + contP.getvenc());
+
+    alert(" Nome Correntista: " + contC.getCorretista() + "\n Banco: " + contC.getbanco() + "\n Numero Conta: "+ contC.getnumero() +
+    "\n Saldo: " + contC.getsaldo() +  "\n Saldo Especial: " + contC.getespecial());
 
 
     </script>
